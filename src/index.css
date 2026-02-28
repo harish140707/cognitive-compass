@@ -5,47 +5,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 @layer base {
-  :root {
-    /* Deep navy cognitive theme */
+  /* ── DARK MODE (default) ── */
+  :root, .dark {
     --background: 222 47% 6%;
     --foreground: 210 40% 95%;
-
     --card: 222 40% 9%;
     --card-foreground: 210 40% 95%;
-
     --popover: 222 40% 9%;
     --popover-foreground: 210 40% 95%;
-
-    /* Electric teal primary */
     --primary: 174 80% 48%;
     --primary-foreground: 222 47% 6%;
-
     --secondary: 222 35% 14%;
     --secondary-foreground: 210 40% 90%;
-
     --muted: 222 35% 12%;
     --muted-foreground: 215 20% 55%;
-
     --accent: 174 80% 48%;
     --accent-foreground: 222 47% 6%;
-
     --destructive: 0 70% 55%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 222 30% 16%;
     --input: 222 35% 12%;
     --ring: 174 80% 48%;
-
     --radius: 0.75rem;
-
-    /* Custom tokens */
     --surface: 222 38% 11%;
     --surface-hover: 222 35% 14%;
     --glow-teal: 174 80% 48%;
     --glow-amber: 38 92% 55%;
     --glow-rose: 348 80% 60%;
     --glow-violet: 262 75% 65%;
-
     --sidebar-background: 222 45% 7%;
     --sidebar-foreground: 210 30% 80%;
     --sidebar-primary: 174 80% 48%;
@@ -54,6 +41,44 @@
     --sidebar-accent-foreground: 210 40% 90%;
     --sidebar-border: 222 30% 13%;
     --sidebar-ring: 174 80% 48%;
+  }
+
+  /* ── LIGHT MODE ── */
+  .light {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 12%;
+    --primary: 174 70% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 30% 93%;
+    --secondary-foreground: 222 47% 20%;
+    --muted: 210 30% 94%;
+    --muted-foreground: 215 20% 45%;
+    --accent: 174 70% 38%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 30% 88%;
+    --input: 214 30% 92%;
+    --ring: 174 70% 38%;
+    --radius: 0.75rem;
+    --surface: 210 30% 96%;
+    --surface-hover: 210 30% 93%;
+    --glow-teal: 174 70% 38%;
+    --glow-amber: 38 92% 45%;
+    --glow-rose: 348 75% 50%;
+    --glow-violet: 262 65% 55%;
+    --sidebar-background: 222 30% 97%;
+    --sidebar-foreground: 222 30% 35%;
+    --sidebar-primary: 174 70% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 30% 93%;
+    --sidebar-accent-foreground: 222 47% 20%;
+    --sidebar-border: 214 30% 88%;
+    --sidebar-ring: 174 70% 38%;
   }
 }
 

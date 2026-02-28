@@ -1,6 +1,7 @@
-import { Brain, LayoutDashboard, BookOpen, Lightbulb, BarChart3, FileText, Users, AlertTriangle, LogOut, ChevronRight } from "lucide-react";
+import { Brain, LayoutDashboard, BookOpen, Lightbulb, BarChart3, FileText, Users, AlertTriangle, LogOut, ChevronRight, Sun, Moon } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
+import { useTheme } from "@/contexts/ThemeContext";
 import { cn } from "@/lib/utils";
 
 const studentNav = [
@@ -21,6 +22,7 @@ const teacherNav = [
 
 export default function Sidebar() {
   const { role, userName, logout } = useAuth();
+  const { theme, toggle } = useTheme();
   const location = useLocation();
   const nav = role === "teacher" ? teacherNav : studentNav;
   const initials = userName.split(" ").map(n => n[0]).join("").toUpperCase().slice(0, 2);
@@ -70,8 +72,15 @@ export default function Sidebar() {
         })}
       </nav>
 
-      {/* Logout */}
-      <div className="px-3 py-4 border-t border-sidebar-border">
+      {/* Bottom actions */}
+      <div className="px-3 py-4 border-t border-sidebar-border flex flex-col gap-1">
+        <button
+          onClick={toggle}
+          className="nav-item w-full text-left"
+        >
+          {theme === "dark" ? <Sun className="w-4 h-4 shrink-0" /> : <Moon className="w-4 h-4 shrink-0" />}
+          <span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
+        </button>
         <button onClick={logout} className="nav-item w-full text-left">
           <LogOut className="w-4 h-4 shrink-0" />
           <span>Sign Out</span>
